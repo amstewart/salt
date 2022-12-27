@@ -25,7 +25,7 @@ import salt.utils.itertools
 import salt.utils.pkg
 import salt.utils.systemd
 from salt.exceptions import CommandExecutionError, MinionError
-from salt.utils.versions import LooseVersion as _LooseVersion
+from salt.utils.versions import LooseVersion
 
 # Import 3rd-party libs
 from salt.ext import six

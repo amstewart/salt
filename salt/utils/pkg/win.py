@@ -1070,7 +1070,7 @@ class WinSoftware(object):
                     # Not expecting the list to be big, simple search and insert
                     insert_point = 0
                     for ver_item in self.__reg_software[dict_key]:
-                        if LooseVersion(version_text) <= LooseVersion(ver_item):
+                        if Version(version_text) <= Version(ver_item):
                             break
                         insert_point += 1
                     self.__reg_software[dict_key].insert(insert_point, version_text)

@@ -8,7 +8,7 @@ import os
 
 # Import salt libs
 import salt.auth
-from salt.utils.versions import StrictVersion as _StrictVersion
+from salt.utils.versions import Version
 
 __virtualname__ = os.path.abspath(__file__).rsplit(os.sep)[-2] or 'rest_tornado'
 

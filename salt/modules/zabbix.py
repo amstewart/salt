@@ -912,7 +912,7 @@ def usergroup_exists(name=None, node=None, nodeids=None, **connection_args):
     try:
         if conn_args:
             # usergroup.exists deprecated
-            if _LooseVersion(zabbix_version) > _LooseVersion("2.5"):
+            if Version(zabbix_version) > Version("2.5"):
                 if not name:
                     name = ''
                 ret = usergroup_get(name, None, **connection_args)
@@ -927,7 +927,7 @@ def usergroup_exists(name=None, node=None, nodeids=None, **connection_args):
                 if name:
                     params['name'] = name
                 # deprecated in 2.4
-                if _LooseVersion(zabbix_version) < _LooseVersion("2.4"):
+                if Version(zabbix_version) < Version("2.4"):
                     if node:
                         params['node'] = node
                     if nodeids:
@@ -973,7 +973,7 @@ def usergroup_get(name=None, usrgrpids=None, userids=None, **connection_args):
         if conn_args:
             method = 'usergroup.get'
             # Versions above 2.4 allow retrieving user group permissions
-            if _LooseVersion(zabbix_version) > _LooseVersion("2.5"):
+            if Version(zabbix_version) > Version("2.5"):
                 params = {"selectRights": "extend", "output": "extend", "filter": {}}
             else:
                 params = {"output": "extend", "filter": {}}
@@ -1186,7 +1186,7 @@ def host_exists(host=None, hostid=None, name=None, node=None, nodeids=None, **co
     try:
         if conn_args:
             # hostgroup.exists deprecated
-            if _LooseVersion(zabbix_version) > _LooseVersion("2.5"):
+            if Version(zabbix_version) > Version("2.5"):
                 if not host:
                     host = None
                 if not name:
@@ -1206,7 +1206,7 @@ def host_exists(host=None, hostid=None, name=None, node=None, nodeids=None, **co
                 if name:
                     params['name'] = name
                 # deprecated in 2.4
-                if _LooseVersion(zabbix_version) < _LooseVersion("2.4"):
+                if Version(zabbix_version) < Version("2.4"):
                     if node:
                         params['node'] = node
                     if nodeids:
@@ -1541,7 +1541,7 @@ def hostgroup_exists(name=None, groupid=None, node=None, nodeids=None, **connect
     try:
         if conn_args:
             # hostgroup.exists deprecated
-            if _LooseVersion(zabbix_version) > _LooseVersion("2.5"):
+            if Version(zabbix_version) > Version("2.5"):
                 if not groupid:
                     groupid = None
                 if not name:
@@ -1557,7 +1557,7 @@ def hostgroup_exists(name=None, groupid=None, node=None, nodeids=None, **connect
                 if name:
                     params['name'] = name
                 # deprecated in 2.4
-                if _LooseVersion(zabbix_version) < _LooseVersion("2.4"):
+                if Version(zabbix_version) < Version("2.4"):
                     if node:
                         params['node'] = node
                     if nodeids:

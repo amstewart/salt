@@ -18,7 +18,6 @@ from tests.support.unit import TestCase
 import salt.loader
 import salt.config
 import salt.utils.files
-import salt.utils.versions
 from salt.state import HighState
 from salt.utils.pydsl import PyDslError
 

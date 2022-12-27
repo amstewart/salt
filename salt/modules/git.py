@@ -5074,8 +5074,7 @@ def version(versioninfo=False):
     Returns the version of Git installed on the minion
 
     versioninfo : False
-        If ``True``, return the version in a versioninfo list (e.g. ``[2, 5,
-        0]``)
+        If ``True``, return the version in a versioninfo list (e.g. ``[2, 5, 0]``)
 
     CLI Example:
 

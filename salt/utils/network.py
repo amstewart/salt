@@ -31,7 +31,7 @@ import salt.utils.zeromq
 from salt._compat import ipaddress
 from salt.exceptions import SaltClientError, SaltSystemExit
 from salt.utils.decorators.jinja import jinja_filter
-from salt.utils.versions import LooseVersion
+from salt.utils.versions import Version
 
 if salt.utils.platform.is_windows():
     # inet_pton does not exist in Windows, this is a workaround

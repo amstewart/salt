@@ -103,8 +103,8 @@ try:
     with warnings.catch_warnings():
         warnings.simplefilter('ignore')
         import pygit2
-    PYGIT2_VERSION = _LooseVersion(pygit2.__version__)
-    LIBGIT2_VERSION = _LooseVersion(pygit2.LIBGIT2_VERSION)
+    PYGIT2_VERSION = Version(pygit2.__version__)
+    LIBGIT2_VERSION = Version(pygit2.LIBGIT2_VERSION)
 
     # Work around upstream bug where bytestrings were being decoded using the
     # default encoding (which is usually ascii on Python 2). This was fixed

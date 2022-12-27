@@ -87,7 +87,7 @@ def _has_required_boto():
     '''
     if not HAS_BOTO:
         return False
-    elif LooseVersion(boto.__version__) < LooseVersion(required_boto_version):
+    elif Version(boto.__version__) < Version(required_boto_version):
         return False
     else:
         return True
@@ -99,7 +99,7 @@ def _get_boto_version():
     '''
     if not HAS_BOTO:
         return False
-    return LooseVersion(boto.__version__)
+    return Version(boto.__version__)
 
 
 def _get_moto_version():
@@ -123,7 +123,7 @@ def _has_required_moto():
     if not HAS_MOTO:
         return False
     else:
-        if _get_moto_version() < LooseVersion(required_moto_version):
+        if _get_moto_version() < Version(required_moto_version):
             return False
         return True
 

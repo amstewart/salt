@@ -18,7 +18,7 @@ import logging
 
 # Import Salt libs
 import salt.utils.platform
-from salt.utils.versions import LooseVersion as _LooseVersion
+from salt.utils.versions import Version
 
 log = logging.getLogger(__name__)
 

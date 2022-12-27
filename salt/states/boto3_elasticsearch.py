@@ -50,7 +50,7 @@ import logging
 
 # Import Salt libs
 import salt.utils.json
-from salt.utils.versions import LooseVersion
+from salt.utils.versions import Version
 
 # Import 3rd-party libs
 

@@ -306,7 +306,7 @@ def _parsed_version(user=None, host=None, port=None, maintenance_db=None,
     )
 
     if psql_version:
-        return _LooseVersion(psql_version)
+        return LooseVersion(psql_version)
     else:
         log.warning('Attempt to parse version of Postgres server failed. '
                     'Is the server responding?')

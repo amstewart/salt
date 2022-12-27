@@ -61,7 +61,7 @@ import salt.utils.hashutils
 import salt.utils.json
 import salt.utils.path
 import salt.utils.stringutils
-from salt.utils.versions import LooseVersion
+from salt.utils.versions import Version
 
 try:
     import azure.storage

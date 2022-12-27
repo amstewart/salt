@@ -65,6 +65,7 @@ import salt.utils.data
 import salt.utils.versions
 from salt.exceptions import CommandExecutionError, MinionError, SaltInvocationError, get_error_message as _get_error_message
 from salt.utils.files import HASHES, HASHES_REVMAP
+from salt.utils.versions import Version
 
 log = logging.getLogger(__name__)
 

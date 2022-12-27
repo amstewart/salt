@@ -37,8 +37,8 @@ def __has_required_azure():
         if hasattr(azure, '__version__'):
             version = LooseVersion(azure.__version__)
         else:
-            version = LooseVersion(azure.common.__version__)
-        if LooseVersion(REQUIRED_AZURE) <= version:
+            version = Version(azure.common.__version__)
+        if Version(REQUIRED_AZURE) <= version:
             return True
     return False
 

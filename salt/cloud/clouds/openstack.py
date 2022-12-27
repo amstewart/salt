@@ -229,6 +229,7 @@ from salt.exceptions import (
     SaltCloudExecutionFailure,
     SaltCloudConfigError,
 )
+from salt.utils.versions import Version
 
 # Import 3rd-Party Libs
 try:

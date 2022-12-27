@@ -19,7 +19,7 @@ import salt.utils.path
 import salt.utils.platform
 import salt.utils.user
 from salt.exceptions import CommandExecutionError, SaltInvocationError
-from salt.utils.versions import LooseVersion as _LooseVersion
+from salt.utils.versions import Version
 
 # Import 3rd-party libs
 from salt.ext import six
@@ -933,7 +933,7 @@ def list_policies(vhost="/", runas=None):
             ret[vhost] = {}
         ret[vhost][name] = {}
 
-        if _LooseVersion(version) >= _LooseVersion("3.7"):
+        if Version(version) >= Version("3.7"):
             # in version 3.7 the position of apply_to and pattern has been
             # switched
             ret[vhost][name]['pattern'] = parts[2]

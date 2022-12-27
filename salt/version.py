@@ -674,6 +674,14 @@ def dependency_information(include_salt_cloud=False):
             yield name, attr
             continue
         try:
+            if attr is None:
+                # Late import to reduce the needed available modules and libs
+                # installed when running `python salt/version.py`
+                from salt._compat import importlib_metadata
+
+                version = importlib_metadata.version(imp)
+                yield name, version
+                continue
             imp = __import__(imp)
             version = getattr(imp, attr)
             if callable(version):

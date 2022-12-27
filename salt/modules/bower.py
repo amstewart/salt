@@ -18,7 +18,7 @@ import shlex
 import salt.utils.json
 import salt.utils.path
 from salt.exceptions import CommandExecutionError
-from salt.utils.versions import LooseVersion as _LooseVersion
+from salt.utils.versions import Version
 
 
 log = logging.getLogger(__name__)

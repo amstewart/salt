@@ -23,7 +23,7 @@ try:
     import jsonschema
     import jsonschema.exceptions
     HAS_JSONSCHEMA = True
-    JSONSCHEMA_VERSION = _LooseVersion(jsonschema.__version__)
+    JSONSCHEMA_VERSION = Version(jsonschema.__version__)
 except ImportError:
     HAS_JSONSCHEMA = False
     JSONSCHEMA_VERSION = _LooseVersion('0')
